@@ -6,37 +6,41 @@ A curated collection of research papers, articles, benchmarks, and resources foc
 ## Table of Contents
 
 - [Papers](#papers)
-  - [1. Input Guard Rail](#1-input-rail)
-  - [2. Planner Guard Rail](#2-retrieval--data-rail)
-  - [3. Retrieval / Memory Guard Rail](#3-model--reasoning-rail)
-  - [4. Tool Execution Guard Rail](#4-tool--action-rail)
-  - [5. Output & Audit Guard Rail](#5-output--monitoring-rail)
+  - [1. Input Guard Rail](#input-guard-rail)
+  - [2. Planner Guard Rail](#planner-guard-rail)
+  - [3. Retrieval / Memory Guard Rail](#retrieval-memory-guard-rail)
+  - [4. Tool Execution Guard Rail](#tool-execution-guard-rail)
+  - [5. Output & Audit Guard Rail](#output-audit-guard-rail)
 - [Contributing](#contributing)
 
 ## Papers
 
+<a id="input-guard-rail"></a>
 ### 1. Input Guard Rail
 
-- [Paper Title](https://arxiv.org/abs/xxxx.xxxxx)
-  - Key: attack / defense / benchmark / survey
-  - Rail: Input Rail
-  - Topic: jailbreak, prompt injection
-  - TLDR: One or two sentence summary of the paper.
-  - Date: Jan 01, 2025
+- [PromptArmor: Simple yet Effective Prompt Injection Defenses](https://arxiv.org/abs/2507.15219)
+  - 🔑 Key: defense
+  - 🤖 Agent Type: Tool Agents / LLM Agents 
+  - 📖 TLDR: This paper revisits a simple LLM-based defense for prompt injection attacks. Instead of training a new detector or modifying the target agent, PromptArmor uses an off-the-shelf LLM as a preprocessing defense: it inspects untrusted external content, identifies injected malicious instructions, removes or rewrites them, and then passes the cleaned content to the downstream agent. The method is simple to deploy, works with black-box agents, and shows strong results on benchmarks such as AgentDojo and OpenPromptInject, reducing attack success while preserving task utility.
+  - Date: Jul 21, 2025
 
+
+<a id="planner-guard-rail"></a>
 ### 2. Planner Guard Rail
 
-- [Paper Title](https://arxiv.org/abs/xxxx.xxxxx)
+- [The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/xxxx.xxxxx)
   - Key: attack
-  - Rail: Retrieval / Data Rail
   - Topic: RAG poisoning, privacy leakage
   - TLDR: Short summary.
   - Date: Jan 01, 2025
 
+<a id="retrieval-memory-guard-rail"></a>
 ### 3. Retrieval / Memory Guard Rail
 
+<a id="tool-execution-guard-rail"></a>
 ### 4. Tool Execution Guard Rail
 
+<a id="output-audit-guard-rail"></a>
 ### 5. Output & Audit Guard Rail
 
 ## Contributing
