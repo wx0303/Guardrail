@@ -24,6 +24,11 @@ This repository focuses on safety issues that arise when large language models a
 ### 1. Safety Evaluation & Benchmarking
 
 Papers, datasets, benchmarks, and red-teaming methods for measuring agent safety risks, including prompt injection, tool misuse, privacy leakage, autonomy risk, harmful task completion, and benchmark reliability.
+- [AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352)
+  - 🔑 Key: benchmark
+  - 🤖 Agent Type: Tool Agents / LLM Agents
+  - 📖 TLDR: AgentDojo is a dynamic benchmark environment for evaluating prompt injection attacks and defenses in tool-using LLM agents. It provides realistic agent tasks, security test cases, and attack/defense settings to measure both task utility and whether malicious instructions hidden in external tool outputs can hijack the agent.
+  - 📅 Date: Jun 18, 2024 / NeurIPS D&B 2024
 
 <a id="defense--guardrails"></a>
 ### 2. Defense & Guardrails
@@ -34,42 +39,37 @@ Methods that prevent, detect, constrain, or audit unsafe agent behavior. Guardra
 #### 2.1 Input & Prompt Injection Defense
 
 - [PromptArmor: Simple yet Effective Prompt Injection Defenses](https://arxiv.org/abs/2507.15219)
-  - Key: defense
-  - Agent Type: Tool Agents / LLM Agents
-  - Topic: prompt injection, preprocessing defense, black-box agents
-  - TLDR: This paper revisits a simple LLM-based defense for prompt injection attacks. Instead of training a new detector or modifying the target agent, PromptArmor uses an off-the-shelf LLM as a preprocessing defense: it inspects untrusted external content, identifies injected malicious instructions, removes or rewrites them, and then passes the cleaned content to the downstream agent. The method is simple to deploy, works with black-box agents, and shows strong results on benchmarks such as AgentDojo and OpenPromptInject, reducing attack success while preserving task utility.
-  - Date: Jul 21, 2025
+  - 🔑 Key: defense
+  - 🤖 Agent Type: Tool Agents / LLM Agents
+  - 📖 TLDR: This paper revisits a simple LLM-based defense for prompt injection attacks. Instead of training a new detector or modifying the target agent, PromptArmor uses an off-the-shelf LLM as a preprocessing defense: it inspects untrusted external content, identifies injected malicious instructions, removes or rewrites them, and then passes the cleaned content to the downstream agent. The method is simple to deploy, works with black-box agents, and shows strong results on benchmarks such as AgentDojo and OpenPromptInject, reducing attack success while preserving task utility.
+  - 📅 Date: Jul 21, 2025
 
 - [Defending Against Indirect Prompt Injection Attacks With Spotlighting](https://arxiv.org/abs/2403.14720)
-  - Key: defense
-  - Agent Type: LLM Applications / RAG Systems / Tool Agents
-  - Topic: indirect prompt injection, untrusted content, data-instruction separation
-  - TLDR: This paper proposes Spotlighting, a training-free defense against indirect prompt injection attacks. The core idea is to make untrusted external content visibly distinguishable from trusted user/system instructions, so the LLM can better treat retrieved web pages, documents, emails, or tool outputs as data rather than executable instructions. The paper shows that spotlighting can reduce attack success rate from over 50% to below 2% in their experiments, while keeping normal task performance mostly intact.
-  - Date: Mar 21, 2024
+  - 🔑 Key: defense
+  - 🤖 Agent Type: LLM Applications / RAG Systems / Tool Agents
+  - 📖 TLDR: This paper proposes Spotlighting, a training-free defense against indirect prompt injection attacks. The core idea is to make untrusted external content visibly distinguishable from trusted user/system instructions, so the LLM can better treat retrieved web pages, documents, emails, or tool outputs as data rather than executable instructions. The paper shows that spotlighting can reduce attack success rate from over 50% to below 2% in their experiments, while keeping normal task performance mostly intact.
+  - 📅 Date: Mar 21, 2024
 
 - [StruQ: Defending Against Prompt Injection with Structured Queries](https://arxiv.org/pdf/2402.06363)
-  - Key: defense
-  - Agent Type: LLM Applications / RAG Systems / Tool Agents
-  - Topic: prompt injection, structured queries, instruction tuning
-  - TLDR: This paper proposes StruQ, a defense against prompt injection that separates trusted instructions from untrusted data using structured queries. Instead of relying only on delimiters or post-hoc detection, StruQ changes the input format so that the model receives the application instruction and external data in separate fields. The model is then instruction-tuned to follow only the instruction field and treat the data field as content, even when the data contains malicious instructions such as "ignore previous instructions." This makes prompt injection harder because injected commands inside external data are no longer treated as valid instructions.
-  - Date: Feb 2024
+  - 🔑 Key: defense
+  - 🤖 Agent Type: LLM Applications / RAG Systems / Tool Agents
+  - 📖 TLDR: This paper proposes StruQ, a defense against prompt injection that separates trusted instructions from untrusted data using structured queries. Instead of relying only on delimiters or post-hoc detection, StruQ changes the input format so that the model receives the application instruction and external data in separate fields. The model is then instruction-tuned to follow only the instruction field and treat the data field as content, even when the data contains malicious instructions such as "ignore previous instructions." This makes prompt injection harder because injected commands inside external data are no longer treated as valid instructions.
+  - 📅 Date: Feb 2024
 
 <a id="planning--task-alignment-defense"></a>
 #### 2.2 Planning & Task Alignment Defense
 
 - [The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/2412.16682)
-  - Key: defense
-  - Agent Type: Tool Agents / LLM Agents
-  - Topic: task alignment, indirect prompt injection, tool-call filtering
-  - TLDR: This paper reframes indirect prompt injection defense as a task alignment problem. Instead of only detecting whether external content is malicious, Task Shield checks whether each instruction, assistant response, and tool call actually contributes to the user's original goal. If an instruction or tool call does not align with the user task, Task Shield blocks or corrects it before the agent proceeds. On AgentDojo, it significantly reduces attack success while preserving task utility.
-  - Date: Dec 2024 / ACL 2025
+  - 🔑 Key: defense
+  - 🤖 Agent Type: Tool Agents / LLM Agents
+  - 📖 TLDR: This paper reframes indirect prompt injection defense as a task alignment problem. Instead of only detecting whether external content is malicious, Task Shield checks whether each instruction, assistant response, and tool call actually contributes to the user's original goal. If an instruction or tool call does not align with the user task, Task Shield blocks or corrects it before the agent proceeds. On AgentDojo, it significantly reduces attack success while preserving task utility.
+  - 📅 Date: Dec 2024 / ACL 2025
 
 - [MELON: Provable Defense Against Indirect Prompt Injection Attacks in AI Agents](https://openreview.net/forum?id=gt1MmGaKdZ)
-  - Key: defense
-  - Agent Type: Tool Agents / LLM Agents
-  - Topic: indirect prompt injection, causal dependence, tool-call verification
-  - TLDR: This paper proposes MELON, a training-free defense against indirect prompt injection attacks in LLM agents. The key observation is that when an attack succeeds, the agent's next action becomes less dependent on the original user task and more dependent on malicious instructions hidden in tool-retrieved content. MELON detects this by re-executing the agent with the user task masked, then comparing tool calls from the original run and the masked run. If the tool calls are similar, the agent is likely being driven by injected malicious content.
-  - Date: Feb 2025 / ICML 2025
+  - 🔑 Key: defense
+  - 🤖 Agent Type: Tool Agents / LLM Agents
+  - 📖 TLDR: This paper proposes MELON, a training-free defense against indirect prompt injection attacks in LLM agents. The key observation is that when an attack succeeds, the agent's next action becomes less dependent on the original user task and more dependent on malicious instructions hidden in tool-retrieved content. MELON detects this by re-executing the agent with the user task masked, then comparing tool calls from the original run and the masked run. If the tool calls are similar, the agent is likely being driven by injected malicious content.
+  - 📅 Date: Feb 2025 / ICML 2025
 
 <a id="retrieval-memory--data-defense"></a>
 #### 2.3 Retrieval, Memory & Data Defense
