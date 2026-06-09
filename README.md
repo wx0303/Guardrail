@@ -30,6 +30,12 @@ Papers, datasets, benchmarks, and red-teaming methods for measuring agent safety
   - 📖 TLDR: AgentDojo is a dynamic benchmark environment for evaluating prompt injection attacks and defenses in tool-using LLM agents. It provides realistic agent tasks, security test cases, and attack/defense settings to measure both task utility and whether malicious instructions hidden in external tool outputs can hijack the agent.
   - 📅 Date: Jun 18, 2024 / NeurIPS D&B 2024
 
+- [WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks](https://arxiv.org/abs/2504.18575)
+  - 🔑 Key: benchmark
+  - 🤖 Agent Type: Web Agents / UI Agents
+  - 📖 TLDR: WASP is a benchmark for evaluating web agent security against prompt injection attacks. It creates realistic browser-based hijacking scenarios in an isolated environment, measuring whether agents can complete user tasks while resisting malicious instructions embedded in web content.
+  - 📅 Date: Apr 2025 / NeurIPS D&B 2025
+
 <a id="defense--guardrails"></a>
 ### 2. Defense & Guardrails
 
