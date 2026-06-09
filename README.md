@@ -43,7 +43,11 @@ Papers, datasets, benchmarks, and red-teaming methods for measuring agent safety
   - 📖 TLDR: RedCode is a benchmark and evaluation platform for code agent safety. It evaluates whether code agents can recognize and avoid risky code execution, and whether code models generate unsafe or malicious code across diverse languages, formats, and real system-interaction settings.
   - 📅 Date: Nov 2024 / NeurIPS D&B 2024
 
-
+- [PrivacyLens: Evaluating Privacy Norm Awareness of Language Models in Action](https://arxiv.org/abs/2409.00138)
+  - 🔑 Key: benchmark
+  - 🤖 Agent Type: LLM Agents
+  - 📖 TLDR: PrivacyLens is a benchmark for evaluating whether LLM agents leak sensitive information or violate privacy norms during action execution, not just in final outputs.
+  - 📅 Date: Sep 2024 / NeurIPS D&B 2024
 <a id="safety-defense"></a>
 ### 2. Safety Defense
 
@@ -120,7 +124,11 @@ Papers on making the underlying model or agent policy safer through supervised f
   - 📖 TLDR: AgentDoG 1.5 proposes a lightweight and scalable alignment framework for AI agent safety. It updates an agent safety taxonomy, builds a taxonomy-guided data engine with influence-function purification, trains compact safety models with around 1k samples, and deploys them as online guardrails for real-time agent safety moderation.
   - 📅 Date: May 28, 2026
 
-
+- [Aligned LLMs Are Not Aligned Browser Agents](https://openreview.net/forum?id=NsFZZU9gvk)
+  - 🔑 Key: benchmark / training data
+  - 🤖 Agent Type: Browser Agents / Web Agents
+  - 📖 TLDR: BrowserART is a red-teaming suite for browser agents that shows refusal-aligned chat models can still take harmful actions in browser settings. It is useful as both an evaluation benchmark and a source of harmful browser-agent cases for safety alignment training.
+  - 📅 Date: 2024 / ICLR 2025
 <a id="trustworthy-agent-architecture"></a>
 #### 2.3 Trustworthy Agent Architecture
 
