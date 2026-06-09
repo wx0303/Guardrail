@@ -89,6 +89,12 @@ Methods that prevent, detect, constrain, or audit unsafe agent behavior. Guardra
 
 <a id="output-audit-guard-rail"></a>
 ##### 2.1.5 Output & Audit Guard Rail
+- [AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection](https://aclanthology.org/2025.acl-long.399/)
+  - 🔑 Key: defense / architecture
+  - 🤖 Agent Type: LLM Agents / Tool Agents
+  - 📖 TLDR: AGrail proposes a lifelong guardrail framework for LLM agents that adaptively generates, executes, and transfers safety checks across tasks. It monitors agent actions at runtime, blocks unsafe behavior, and updates its safety memory to handle evolving risks.
+  - 📅 Date: Jul 2025 / ACL 2025
+
 
 <a id="safety-alignment-training"></a>
 #### 2.2 Safety Alignment Training
