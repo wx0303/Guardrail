@@ -105,11 +105,9 @@ System-level designs for safer agents, including permission systems, least-privi
 Pull requests are welcome. Please add papers using the following format:
 
 ```md
-- [Title](URL)
-  - Key: attack / defense / benchmark / survey / training / architecture
-  - Area: Evaluation / Defense / Training / Architecture
-  - Agent Type:
-  - Topic:
-  - TLDR:
-  - Date:
+- [title](paper link)
+    - 🔑 Key: e.g., attack/defense/evaluation/benchmark/survey/position
+    - 🤖 Agent Type: e.g., Web Agent/Tool Agent/Communicative Agent/OS Agent
+    - 📖 TLDR: Brief summary of the paper.
+    - 📅 Date: e.g., Jan 01, 2025
 ```
