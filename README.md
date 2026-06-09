@@ -37,6 +37,13 @@ Papers, datasets, benchmarks, and red-teaming methods for measuring agent safety
   - 📖 TLDR: WASP is a benchmark for evaluating web agent security against prompt injection attacks. It creates realistic browser-based hijacking scenarios in an isolated environment, measuring whether agents can complete user tasks while resisting malicious instructions embedded in web content.
   - 📅 Date: Apr 2025 / NeurIPS D&B 2025
 
+- [RedCode: Risky Code Execution and Generation Benchmark for Code Agents](https://arxiv.org/abs/2411.07781)
+  - 🔑 Key: benchmark
+  - 🤖 Agent Type: Code Agents / Tool Agents
+  - 📖 TLDR: RedCode is a benchmark and evaluation platform for code agent safety. It evaluates whether code agents can recognize and avoid risky code execution, and whether code models generate unsafe or malicious code across diverse languages, formats, and real system-interaction settings.
+  - 📅 Date: Nov 2024 / NeurIPS D&B 2024
+
+
 <a id="safety-defense"></a>
 ### 2. Safety Defense
 
@@ -100,6 +107,19 @@ Methods that prevent, detect, constrain, or audit unsafe agent behavior. Guardra
 #### 2.2 Safety Alignment Training
 
 Papers on making the underlying model or agent policy safer through supervised fine-tuning, RLHF/RLAIF, constitutional methods, refusal training, harmlessness training, tool-use training, adversarial training, and robustness training.
+
+- [ToolSafety: A Comprehensive Dataset for Enhancing Safety in LLM-Based Agent Tool Invocations](https://huggingface.co/datasets/jinjinyien/ToolSafety)
+  - 🔑 Key: training / dataset
+  - 🤖 Agent Type: Tool Agents / LLM Agents
+  - 📖 TLDR: ToolSafety introduces a safety fine-tuning dataset for tool-using LLM agents, covering direct harm, indirect harm, and multi-step tool interaction scenarios. Fine-tuning models on ToolSafety improves their ability to maintain safety during complex tool invocation while preserving helpfulness.
+  - 📅 Date: Nov 2025 / EMNLP 2025
+
+- [AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security](https://arxiv.org/abs/2605.29801)
+  - 🔑 Key: training / defense / architecture
+  - 🤖 Agent Type: LLM Agents / Tool Agents / Open-world Agents
+  - 📖 TLDR: AgentDoG 1.5 proposes a lightweight and scalable alignment framework for AI agent safety. It updates an agent safety taxonomy, builds a taxonomy-guided data engine with influence-function purification, trains compact safety models with around 1k samples, and deploys them as online guardrails for real-time agent safety moderation.
+  - 📅 Date: May 28, 2026
+
 
 <a id="trustworthy-agent-architecture"></a>
 #### 2.3 Trustworthy Agent Architecture
