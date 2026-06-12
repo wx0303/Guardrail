@@ -71,11 +71,7 @@ Methods that prevent, detect, constrain, or audit unsafe agent behavior. Guardra
   - 📖 TLDR: This paper proposes Spotlighting, a training-free defense against indirect prompt injection attacks. The core idea is to make untrusted external content visibly distinguishable from trusted user/system instructions, so the LLM can better treat retrieved web pages, documents, emails, or tool outputs as data rather than executable instructions. The paper shows that spotlighting can reduce attack success rate from over 50% to below 2% in their experiments, while keeping normal task performance mostly intact.
   - 📅 Date: Mar 21, 2024
 
-- [StruQ: Defending Against Prompt Injection with Structured Queries](https://arxiv.org/pdf/2402.06363)
-  - 🔑 Key: defense
-  - 🤖 Agent Type: LLM Applications / RAG Systems / Tool Agents
-  - 📖 TLDR: This paper proposes StruQ, a defense against prompt injection that separates trusted instructions from untrusted data using structured queries. Instead of relying only on delimiters or post-hoc detection, StruQ changes the input format so that the model receives the application instruction and external data in separate fields. The model is then instruction-tuned to follow only the instruction field and treat the data field as content, even when the data contains malicious instructions such as "ignore previous instructions." This makes prompt injection harder because injected commands inside external data are no longer treated as valid instructions.
-  - 📅 Date: Feb 2024
+
 
 <a id="planner-guard-rail"></a>
 ##### 2.1.2 Planner Guard Rail
@@ -173,7 +169,11 @@ Papers on making the underlying model or agent policy safer through supervised f
 #### 2.3 Trustworthy Agent Architecture
 
 System-level designs for safer agents, including permission systems, least-privilege tool access, sandboxing, human approval workflows, multi-agent oversight, memory isolation, secure RAG pipelines, runtime monitors, policy engines, and incident recovery.
-
+- [StruQ: Defending Against Prompt Injection with Structured Queries](https://arxiv.org/pdf/2402.06363)
+  - 🔑 Key: defense
+  - 🤖 Agent Type: LLM Applications / RAG Systems / Tool Agents
+  - 📖 TLDR: This paper proposes StruQ, a defense against prompt injection that separates trusted instructions from untrusted data using structured queries. Instead of relying only on delimiters or post-hoc detection, StruQ changes the input format so that the model receives the application instruction and external data in separate fields. The model is then instruction-tuned to follow only the instruction field and treat the data field as content, even when the data contains malicious instructions such as "ignore previous instructions." This makes prompt injection harder because injected commands inside external data are no longer treated as valid instructions.
+  - 📅 Date: Feb 2024
 ## Contributing
 
 Pull requests are welcome. Please add papers using the following format:
